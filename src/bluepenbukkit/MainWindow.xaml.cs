@@ -24,5 +24,27 @@ namespace bluepenbukkit
         {
             InitializeComponent();
         }
+
+        private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        bool Max = false;
+        private void MaxButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Max == false) { WindowState = WindowState.Maximized; Max = true; }
+            else
+            { WindowState = WindowState.Normal; Max = false; }
+        }
+
+        private void MinButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

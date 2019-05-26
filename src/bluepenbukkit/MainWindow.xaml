@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
     <Grid Background="#FF171717">
-        <StackPanel Background="#FF1E1E1E" Height="25" VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft">
-            <Button HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+        <StackPanel Background="#FF1E1E1E" Height="25" VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+            <Button x:Name="ExitButton" HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="ExitButton_Click">
                 <Grid>
                     <Border Background="White" RenderTransformOrigin="0.5,0.5" Height="1.5" Width="18">
                         <Border.RenderTransform>
@@ -32,12 +32,12 @@
                     </Border>
                 </Grid>
             </Button>
-            <Button HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+            <Button x:Name="MaxButton" HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="MaxButton_Click" >
                 <Border MinWidth="10" MinHeight="11" Background="White" Height="13" Width="13" Margin="0">
                     <Border Background="#FF1E1E1E" Height="8" Width="10" Margin="0,0,0,-3"/>
                 </Border>
             </Button>
-            <Button HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}">
+            <Button x:Name="MinButton" HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="MinButton_Click">
                 <Border Background="White" Height="1.5" Width="18"/>
             </Button>
         </StackPanel>
