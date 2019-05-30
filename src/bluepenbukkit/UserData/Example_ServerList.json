@@ -1,0 +1,10 @@
+﻿{
+  "Hello, Minecraft": {
+    "path": "ServerFolder_0",
+    "jarPath": "Bukkit.jar"
+  },
+  "I am Iron Man": {
+    "path": "ServerFolder_1",
+    "jarPath": "Bukkit.jar"
+  }
+}

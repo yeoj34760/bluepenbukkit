@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bluepenbukkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip">
+        Title="MainWindow" MinHeight="300" MinWidth="800" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF171717">
         <StackPanel Background="#FF1E1E1E" Height="25" VerticalAlignment="Top" Orientation="Horizontal" FlowDirection="RightToLeft" MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
             <Button x:Name="ExitButton" HorizontalAlignment="Right" Width="25" Height="25" BorderBrush="{x:Null}" Background="#FF1E1E1E" Foreground="{x:Null}" Style="{DynamicResource ButtonStyle1}" Click="ExitButton_Click">
@@ -41,10 +41,12 @@
                 <Border Background="White" Height="1.5" Width="18"/>
             </Button>
         </StackPanel>
-        <WrapPanel HorizontalAlignment="Left" Margin="0,25,163,0" Width="637"/>
-        <Button HorizontalAlignment="Right" Height="38" Margin="637,79,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}">
+        <WrapPanel x:Name="ServerListPanel" HorizontalAlignment="Left" Margin="0,25,163,0" Width="637">
+
+        </WrapPanel>
+        <Button x:Name="ServerCreateButton"  HorizontalAlignment="Right" Height="38" Margin="0,193,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerCreateButton_Click">
             <Grid>
-                <Label Content="실행" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <Label Content="생성" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                 <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
             </Grid>
         </Button>
@@ -60,7 +62,7 @@
                 <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
             </Grid>
         </Button>
-        <Button HorizontalAlignment="Right" Height="38" Margin="637,155,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}">
+        <Button x:Name="ServerDeleteButton" HorizontalAlignment="Right" Height="38" Margin="637,155,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerDeleteButton_Click">
             <Grid>
                 <Label Content="삭제" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                 <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>

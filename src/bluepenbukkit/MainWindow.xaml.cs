@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Newtonsoft.Json.Linq;
 namespace bluepenbukkit
 {
     /// <summary>
@@ -20,11 +21,22 @@ namespace bluepenbukkit
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static List<ServerListButton> serverListButtons = new List<ServerListButton>();
         public MainWindow()
         {
             InitializeComponent();
+            ServerListLoad();
         }
-
+        private void ServerListLoad()
+        {
+            ServerListPanel.Children.Clear();
+            foreach (var J in init.rss.Properties())
+            {
+                ServerListButton serverListButton = new ServerListButton(J.Name);
+                serverListButtons.Add(serverListButton);
+                ServerListPanel.Children.Add(serverListButton);
+            }
+        }
         private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
@@ -45,6 +57,33 @@ namespace bluepenbukkit
         private void MinButton_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+        public static void CheckRectangleHidden()
+        {
+            foreach (ServerListButton s in serverListButtons)
+                s.CheckRectangle.Visibility = Visibility.Hidden;
+        }
+
+        private void ServerDeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (init.C_Name != null)
+            {
+                init.rss.Property(init.C_Name).Remove();
+                File.WriteAllText(init.ProPath + "\\UserData\\Example_ServerList.json", init.rss.ToString());
+                ServerListLoad();
+                init.C_Name = null;
+                init.C_JObject = null;
+            }
+            else MessageBox.Show("Server를 선택하세요.");
+        }
+
+        private void ServerCreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            CreateWindow createWindow = new CreateWindow();
+            createWindow.Owner = this;
+            createWindow.Width = this.Width * 0.7;
+            createWindow.Height = this.Height * 0.7;
+            createWindow.ShowDialog();
         }
     }
 }
