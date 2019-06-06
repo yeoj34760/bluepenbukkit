@@ -35,6 +35,8 @@ namespace bluepenbukkit
             init.C_JObject = init.rss[ServerName] as JObject;
             init.C_Name = ServerName;
             CheckRectangle.Visibility = Visibility.Visible;
+       
         }
+
     }
 }

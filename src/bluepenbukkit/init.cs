@@ -12,5 +12,6 @@ namespace bluepenbukkit
         public static JObject C_JObject;
         public static string C_Name;
        public static JObject rss = JObject.Parse(System.IO.File.ReadAllText(init.ProPath + "\\UserData\\Example_ServerList.json"));
+        public static bool Exited = false;
     }
 }

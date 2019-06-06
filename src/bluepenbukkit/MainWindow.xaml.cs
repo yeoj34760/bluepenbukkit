@@ -37,10 +37,6 @@ namespace bluepenbukkit
                 ServerListPanel.Children.Add(serverListButton);
             }
         }
-        private void StackPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -49,7 +45,7 @@ namespace bluepenbukkit
         bool Max = false;
         private void MaxButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Max == false) { WindowState = WindowState.Maximized; Max = true; }
+            if (Max == false) { WindowState = WindowState.Maximized ; Max = true; }
             else
             { WindowState = WindowState.Normal; Max = false; }
         }
@@ -84,6 +80,24 @@ namespace bluepenbukkit
             createWindow.Width = this.Width * 0.7;
             createWindow.Height = this.Height * 0.7;
             createWindow.ShowDialog();
+        }
+
+        private void ServerStartButton_Click(object sender, RoutedEventArgs e)
+        {
+            StartWindow startWindow = new StartWindow();
+            startWindow.ShowSendEvent += new StartWindow.ShowEventHandler(WIndowShow);
+            Hide();
+            startWindow.Show();
+        }
+
+        private void WIndowShow()
+        {
+            Visibility = Visibility.Visible;
+        }
+
+        private void Grid_MouseLeftButtonDown_1(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }
