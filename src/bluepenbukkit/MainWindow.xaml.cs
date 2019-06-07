@@ -21,7 +21,7 @@ namespace bluepenbukkit
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static List<ServerListButton> serverListButtons = new List<ServerListButton>();
+        public static List<ServerListButton> serverListButtons = new List<ServerListButton>(); //서버 리스트 버튼
         public MainWindow()
         {
             InitializeComponent();
@@ -29,8 +29,8 @@ namespace bluepenbukkit
         }
         private void ServerListLoad()
         {
-            ServerListPanel.Children.Clear();
-            foreach (var J in init.rss.Properties())
+            ServerListPanel.Children.Clear(); //불러오기전에 서버리스트패널을 정리함.
+            foreach (var J in init.rss.Properties()) //서버리스트를 불러옵니다.
             {
                 ServerListButton serverListButton = new ServerListButton(J.Name);
                 serverListButtons.Add(serverListButton);
@@ -79,15 +79,23 @@ namespace bluepenbukkit
             createWindow.Owner = this;
             createWindow.Width = this.Width * 0.7;
             createWindow.Height = this.Height * 0.7;
+            createWindow.ShowSendEvent += () =>
+            {
+                ServerListLoad();
+            };
             createWindow.ShowDialog();
         }
 
         private void ServerStartButton_Click(object sender, RoutedEventArgs e)
         {
-            StartWindow startWindow = new StartWindow();
-            startWindow.ShowSendEvent += new StartWindow.ShowEventHandler(WIndowShow);
-            Hide();
-            startWindow.Show();
+            if (init.C_JObject != null)
+            {
+                StartWindow startWindow = new StartWindow();
+                startWindow.ShowSendEvent += new StartWindow.ShowEventHandler(WIndowShow);
+                Hide();
+                startWindow.Show();
+            }
+
         }
 
         private void WIndowShow()

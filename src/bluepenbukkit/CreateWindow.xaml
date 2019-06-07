@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:bluepenbukkit"
         mc:Ignorable="d"
         Title="CreateWindow" Height="225" Width="400" WindowStartupLocation="CenterOwner" AllowsTransparency="True" WindowStyle="None" Background="#FF232323">
-    <Grid>
+    <Grid x:Name="WIndowGrid">
         
     </Grid>
 </Window>

@@ -63,6 +63,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateControl\JarChoiceControl.xaml.cs">
+      <DependentUpon>JarChoiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateControl\Jar\ExistingControl.xaml.cs">
+      <DependentUpon>ExistingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateControl\Jar\NewControl.xaml.cs">
+      <DependentUpon>NewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateControl\NameControl.xaml.cs">
+      <DependentUpon>NameControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateWindow.xaml.cs">
       <DependentUpon>CreateWindow.xaml</DependentUpon>
     </Compile>
@@ -77,6 +89,22 @@
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\JarChoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\Jar\ExistingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\Jar\NewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\NameControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
