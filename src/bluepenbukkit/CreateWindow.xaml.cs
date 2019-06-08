@@ -82,7 +82,7 @@ namespace bluepenbukkit
             init.rss.Add(new JProperty(ServerName,
                 new JObject(
                     new JProperty("path", "ServerFolder_" + i),
-                    new JProperty("Jar", ServerFileName)))); //rss에 추가된 서버 정보를 추가합니다.
+                    new JProperty("jarPath", ServerFileName)))); //rss에 추가된 서버 정보를 추가합니다.
             System.IO.File.WriteAllText(init.ServerListPath, init.rss.ToString()); //수정된 정보를 저장합니다.
             MessageBox.Show("서버 생성되었습니다!"); //성공했다고 알림
             ShowSendEvent();

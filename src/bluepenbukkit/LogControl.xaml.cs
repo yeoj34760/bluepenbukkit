@@ -26,31 +26,11 @@ namespace bluepenbukkit
         {
             InitializeComponent();
         }
-        Process p = new Process();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(init.ProPath + "\\UserData\\Jar" + init.C_JObject["jarPath"].ToString());
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.FileName = "java";
-            p.StartInfo.CreateNoWindow = true;
-            p.StartInfo.RedirectStandardError = true;
-            p.StartInfo.RedirectStandardInput = true;
-            p.StartInfo.RedirectStandardOutput = true;
-            p.EnableRaisingEvents = true;
-            p.Exited += new EventHandler(ExitedEvent);
-            p.StartInfo.WorkingDirectory = init.ProPath + "\\UserData\\Servers\\" + init.C_JObject["path"].ToString();
-            p.StartInfo.Arguments = "-Xmx1G -Xms1G -jar " + init.ProPath + "\\UserData\\Jar\\" + init.C_JObject["jarPath"].ToString();
-            p.OutputDataReceived += new DataReceivedEventHandler(OutputData);
-            p.ErrorDataReceived += new DataReceivedEventHandler(OutputData);
-            p.Start();
-            p.BeginOutputReadLine();
-            init.Exited = true;
+            Bukkit.Start(this);
         }
-        private void ExitedEvent(object sender, EventArgs e)
-        {
-            init.Exited = false;
-        }
-        private void OutputData(object sender, DataReceivedEventArgs e)
+        public void OutputData(object sender, DataReceivedEventArgs e)
         {
             Dispatcher.Invoke(DispatcherPriority.Normal, new Action(delegate
             {
@@ -59,11 +39,12 @@ namespace bluepenbukkit
                 PrintTextBox.ScrollToEnd(); //자동스크롤
             }));
         }
+        
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Return)
             {
-                p.StandardInput.WriteLine(InputTextBox.Text); //입력
+                Bukkit.p.StandardInput.WriteLine(InputTextBox.Text); //입력
                 InputTextBox.Clear();//자동정리
             }
         }

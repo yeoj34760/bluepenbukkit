@@ -26,9 +26,10 @@ namespace bluepenbukkit
 
         public delegate void ShowEventHandler();
         public event ShowEventHandler ShowSendEvent;
+        LogControl logControl = new LogControl();
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (init.Exited == false)
+            if (Bukkit.Exited == false)
             {
                 Close();
                 ShowSendEvent();
@@ -37,13 +38,19 @@ namespace bluepenbukkit
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            LogControl logControl = new LogControl();
+            WindowGird.Children.Clear();
             WindowGird.Children.Add(logControl);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void WindowGird_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            logControl.Width = e.NewSize.Width;
+            logControl.Height = e.NewSize.Height;
         }
     }
 }

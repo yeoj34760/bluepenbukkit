@@ -11,8 +11,8 @@ namespace bluepenbukkit
         public static readonly string ProPath = Environment.CurrentDirectory;
         public static JObject C_JObject;
         public static string C_Name;
-        public static string ServerListPath = init.ProPath + "\\UserData\\Example_ServerList.json";
-       public static JObject rss = JObject.Parse(System.IO.File.ReadAllText(ServerListPath));
-        public static bool Exited = false;
+          public static string ServerListPath = init.ProPath + "\\UserData\\Example_ServerList.json";
+        //public static string ServerListPath = init.ProPath + "\\UserData\\ServerList.json";
+        public static JObject rss = JObject.Parse(System.IO.File.ReadAllText(ServerListPath));
     }
 }

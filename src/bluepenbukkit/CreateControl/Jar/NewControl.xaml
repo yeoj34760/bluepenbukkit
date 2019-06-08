@@ -9,7 +9,7 @@
     <Grid>
         <Button Background="#FF232323" Content="뾱" AllowDrop="true" Width="100" Height="100" DragEnter="Button_DragEnter" Drop="Button_Drop" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource ButtonStyle1}" FontSize="36"/>
         <Label x:Name="FileNameLabel" Foreground="White" Content="버튼을 클릭하거나, 파일을 버튼에 끌어서 놓으세요." HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-150,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1" Margin="0">
+        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource NextButtonStyle}" Click="Button_Click_1" Margin="0">
             <Label FontFamily="MoeumT R" Content="→" Foreground="White" FontSize="36"/>
         </Button>
     </Grid>

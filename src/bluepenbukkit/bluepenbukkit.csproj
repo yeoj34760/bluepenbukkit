@@ -63,6 +63,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bukkit.cs" />
+    <Compile Include="CreateControl\Image\ExistingControl.xaml.cs">
+      <DependentUpon>ExistingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateControl\Image\NewControl.xaml.cs">
+      <DependentUpon>NewControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateControl\JarChoiceControl.xaml.cs">
       <DependentUpon>JarChoiceControl.xaml</DependentUpon>
     </Compile>
@@ -82,6 +89,7 @@
     <Compile Include="LogControl.xaml.cs">
       <DependentUpon>LogControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FileProperties.cs" />
     <Compile Include="ServerListButton.xaml.cs">
       <DependentUpon>ServerListButton.xaml</DependentUpon>
     </Compile>
@@ -89,6 +97,14 @@
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\Image\ExistingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateControl\Image\NewControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,7 +187,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UserData\Icon\" />
+    <Folder Include="UserData\Jar\" />
     <Folder Include="UserData\Servers\" />
   </ItemGroup>
   <ItemGroup>

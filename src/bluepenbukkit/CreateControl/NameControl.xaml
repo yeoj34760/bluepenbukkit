@@ -9,8 +9,8 @@
     <Grid>
         <Label Content="서버 이름을 정하세요" Background="Transparent" Foreground="White" FontSize="16" Margin="0,0,0,50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBox x:Name="ServerNameTextBox" HorizontalAlignment="Center" Height="21.334" Margin="0,0,0,0.2" TextWrapping="Wrap" VerticalAlignment="Center" Width="198.001" TextAlignment="Center" Background="#FF2D2D2D" BorderBrush="{x:Null}" Foreground="White"/>
-        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource ButtonStyle1}" Click="Button_Click_1" Margin="0">
-            <Label FontFamily="MoeumT R" Content="→" Foreground="White" FontSize="36"/>
+        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource NextButtonStyle}" Click="Button_Click_1" Margin="0">
+            <Label FontFamily="MoeumT R" Content="→" Foreground="White" FontSize="36" Width="50" Height="50" />
         </Button>
     </Grid>
     

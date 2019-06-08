@@ -11,7 +11,7 @@
             <WrapPanel x:Name="JarListWrapPanel"/>
         </ScrollViewer>
       
-        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource ButtonStyle1}" Margin="0" Click="Button_Click">
+        <Button HorizontalAlignment="Right" Width="50" Height="50" BorderBrush="{x:Null}" Background="#FF232323" Style="{DynamicResource NextButtonStyle}" Margin="0" Click="Button_Click">
             <Label FontFamily="MoeumT R" Content="→" Foreground="White" FontSize="36"/>
         </Button>
     </Grid>

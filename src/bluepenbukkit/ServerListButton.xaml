@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:bluepenbukkit"
              mc:Ignorable="d" Width="198" Height="97.5"  MouseLeftButtonUp="UserControl_MouseLeftButtonUp">
 
-    <Border Background="#FF1B1B1B" CornerRadius="15">
+    <Border Background="#FF1B1B1B">
         <Grid>
             <Label x:Name="ServerNameLabel" Content="서버 이름" Foreground="White" Margin="5,0,50,64" FontSize="18"/>
-            <Label Content="플러그인 : 0" Foreground="White" Margin="5,68,0,0" FontSize="16" />
+            <Label x:Name="PluginsLabel" Content="플러그인 : 0" Foreground="White" Margin="5,68,0,0" FontSize="16" />
             <Image HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Margin="148,0,0,0"/>
             <Rectangle x:Name="CheckRectangle" Fill="#FF9898FF" HorizontalAlignment="Left" Height="98" VerticalAlignment="Top" Width="5"/>
         </Grid>

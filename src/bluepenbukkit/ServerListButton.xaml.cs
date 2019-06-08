@@ -21,10 +21,11 @@ namespace bluepenbukkit
     public partial class ServerListButton : UserControl
     {
         string ServerName;
-        public ServerListButton(string ServerName_)
+        public ServerListButton(string ServerName_, int Plugins)
         {
             InitializeComponent();
             ServerName = ServerName_;
+            PluginsLabel.Content = $"플러그인 : {Plugins}";
             ServerNameLabel.Content = ServerName_;
             CheckRectangle.Visibility = Visibility.Hidden;
         }

@@ -50,7 +50,7 @@
             </Grid>
             
             <WrapPanel x:Name="ServerListPanel" HorizontalAlignment="Left" Margin="0,46.333,0,0" Width="637"/>
-            <Button x:Name="ServerCreateButton"  HorizontalAlignment="Right" Height="38" Margin="0,193,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerCreateButton_Click">
+            <Button x:Name="ServerCreateButton"  HorizontalAlignment="Right" Height="38" Margin="0,203,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerCreateButton_Click">
                 <Grid>
                     <Label Content="생성" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                     <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
@@ -68,12 +68,19 @@
                     <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
                 </Grid>
             </Button>
-            <Button x:Name="ServerDeleteButton" HorizontalAlignment="Right" Height="38" Margin="637,155,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerDeleteButton_Click">
+            <Button x:Name="ServerDeleteButton" HorizontalAlignment="Right" Height="38" Margin="0,160,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerDeleteButton_Click">
                 <Grid>
                     <Label Content="삭제" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                     <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
                 </Grid>
             </Button>
+            <Button x:Name="ServerFolderButton" HorizontalAlignment="Right" Height="38" Margin="0,246,0,0" VerticalAlignment="Top" Width="163" BorderBrush="{x:Null}" Background="#FF171717" Foreground="White" Style="{DynamicResource ButtonStyle1}" Click="ServerFolderButton_Click">
+                <Grid>
+                    <Label Content="폴더열기" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <Border Background="#FF69C9D8" Height="38" Width="2" Margin="157,0,0,0"/>
+                </Grid>
+            </Button>
+
         </Grid>
     </Border>
     
